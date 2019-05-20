@@ -12,7 +12,8 @@ app.engine("handlebars", exphbs({ defaultLayout: 'main'}));
 app.set("view engine", "handlebars");
 
 
-
+var router = require("./controllers/burgers_controllers.js");
+app.use("/", router);
 
 // Tells server to run with port 8080
 app.listen(PORT, function() {
