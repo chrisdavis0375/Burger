@@ -13,7 +13,7 @@ app.set("view engine", "handlebars");
 
 // Server will be using the routes in controller directory
 var router = require("./controllers/burgers_controllers.js");
-app.use("/", router);
+app.use(router);
 
 // Tells server to run with port 8080
 app.listen(PORT, function() {

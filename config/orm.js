@@ -4,13 +4,14 @@ var connection = require('./connection.js');
 
 // Methods for selecting all queries, inserting new ones, and updating current queries
 var orm = {
-    selectAll: function() {
+    selectAll: function(callback) {
         var query = "SELECT * FROM burger";
         connection.query(query, function(err, results) {
             if(err) {
                 console.log(err);
             }
             console.log(results);
+            callback(results);
         })
     },
     insertOne: function(newName) {

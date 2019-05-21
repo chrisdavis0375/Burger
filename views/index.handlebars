@@ -1,17 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Burger</title>
-    <link rel="stylesheet" type="text/css" href="../../public/assets/css/style.css">
+    <h1>Eat the burger!</h1>
+    <img id="burgerPic" src="../public/assets/images/burger.jpg">
 
-</head>
-
-<body>
-
-</body>
-
-</html>
+    <div id="edible">
+        <h3>Burgers that can be eaten:</h3>
+        <ul>
+            {{#each burger}}
+                {{#unless this.devoured}}
+            <li>
+                {{this.id}}/ {{this.burger_name}}
+                {{/unless}}
+            {{/each}}
+                <form>
+                    <input type="text">
+                    <button type="submit">Eat me!</button>
+                </form>
+            </li>
+        </ul>
+    </div>
